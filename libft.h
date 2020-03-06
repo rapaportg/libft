@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabrielrapaport <gabrielrapaport@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/05 21:03:55 by gabrielrapa       #+#    #+#             */
-/*   Updated: 2020/03/06 09:59:38 by gabrielrapa      ###   ########.fr       */
+/*   Created: 2020/03/06 09:51:54 by gabrielrapa       #+#    #+#             */
+/*   Updated: 2020/03/06 10:08:17 by gabrielrapa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_H
+#define LIBFT_H
+#include <stdlib.h>
+#include <unistd.h>
 
-void ft_bzero(void *s, size_t n)
-{
-    ft_memset(s, 0, n);
-}
+void    *ft_memset(void *b, int c, size_t len);
+void    bft_zero(void *s, size_t n);
+void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void    *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
+void    *ft_memmove(void *dst, const void *src, size_t len);
+
+
+
+#endif
