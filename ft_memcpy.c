@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabrielrapaport <gabrielrapaport@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/05 20:37:36 by gabrielrapa       #+#    #+#             */
-/*   Updated: 2020/03/05 21:18:40 by gabrielrapa      ###   ########.fr       */
+/*   Created: 2020/03/05 21:18:13 by gabrielrapa       #+#    #+#             */
+/*   Updated: 2020/03/05 21:52:51 by gabrielrapa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memset(void *b, int c, size_t len)
+void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-    unsigned char *tmp;
+    void *ret;
 
-    tmp = b;
-    while(len--)
+    ret = dst;
+    while(n--)
     {
-        *tmp++ = (unsigned char)c;
+        *(unsigned char*)dst++ = *(unsigned char*)src++;
     }
-    return (b);
+
+    return (ret);
 }
