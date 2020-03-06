@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabrielrapaport <gabrielrapaport@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/05 20:37:36 by gabrielrapa       #+#    #+#             */
-/*   Updated: 2020/03/05 21:12:59 by gabrielrapa      ###   ########.fr       */
+/*   Created: 2020/03/05 21:03:55 by gabrielrapa       #+#    #+#             */
+/*   Updated: 2020/03/05 21:13:14 by gabrielrapa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_memset.c"
 
-void *ft_memset(void *b, int c, size_t len)
+void bzero(void *s, size_t n)
 {
-    unsigned char *tmp;
-
-    tmp = b;
-    while(len--)
-    {
-        *tmp++ = (unsigned char)c;
-    }
-    return (b);
+    ft_memset(s, 0, n);
 }
