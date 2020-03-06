@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabrielrapaport <gabrielrapaport@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/06 10:47:36 by gabrielrapa       #+#    #+#             */
-/*   Updated: 2020/03/06 15:25:40 by gabrielrapa      ###   ########.fr       */
+/*   Created: 2020/03/06 15:31:30 by gabrielrapa       #+#    #+#             */
+/*   Updated: 2020/03/06 15:43:51 by gabrielrapa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
-#include "ft_memcpy.c"
 #include "ft_strlen.c"
 
-char *ft_strdup(const char *s1)
+char *ft_strcpy(char *dst, const char *src)
 {
-    char *ret;
+    char *ret = dst;
 
-    ret = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
-    if (!ret)
-        return (0);
-
-    ft_memcpy(ret, s1, sizeof(char) * ft_strlen(s1));
+    while (*src != '\0')
+    {
+        *dst++ = *src++;
+    }
+    *dst = '\0';
     return (ret);
 }
