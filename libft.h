@@ -6,7 +6,7 @@
 /*   By: gabrielrapaport <gabrielrapaport@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 09:51:54 by gabrielrapa       #+#    #+#             */
-/*   Updated: 2020/03/06 21:59:23 by gabrielrapa      ###   ########.fr       */
+/*   Updated: 2020/03/07 12:36:42 by gabrielrapa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ char    *ft_strcpy(char *dst, const char *src);
 char    *ft_strncpy(char *dst, const char *src);
 char    *ft_strcat(char *restrict s1, const char *restrict s2);
 char    *ft_strncat(char *restrict s1, const char *restrict s2, size_t n);
-size_t  strlcat(char *restrict dst, const char * restrict src, size_t dstsize);
+//size_t  strlcat(char *restrict dst, const char * restrict src, size_t dstsize);
+char    *ft_strchr(const char *s, int c);
+char    *ft_strrchr(const char *s, int c);
+char    *ft_strstr(const char *haystack, const char *needle);
 
 #endif
