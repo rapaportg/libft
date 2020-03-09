@@ -1,4 +1,4 @@
-#include "../ft_strcat.c"
+#include "../libft.h"
 #include <stdio.h>
 
 void Test1()
@@ -23,7 +23,7 @@ void Test2()
 
 void Test3()
 {
-  char s1[100] = "01234";
+  char s1[8] = "01234";
   char s2[100] = "56789";
 
   printf("\nBasic Functionality Test 3");

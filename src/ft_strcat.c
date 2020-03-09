@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabrielrapaport <gabrielrapaport@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/07 12:09:15 by gabrielrapa       #+#    #+#             */
-/*   Updated: 2020/03/07 12:24:12 by gabrielrapa      ###   ########.fr       */
+/*   Created: 2020/03/06 18:55:38 by gabrielrapa       #+#    #+#             */
+/*   Updated: 2020/03/06 21:31:29 by gabrielrapa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// behavior undefined if dest is not large enough for s2 
 #include "libft.h"
-#include "ft_strlen.c"
 
-char *ft_strrchr(const char *s, int c)
+char *ft_strcat(char *restrict s1, const char *restrict s2)
 {
-    int i;
+    char    *ret;
 
-    i = ft_strlen(s) + 1;
-
-    if (!s)
-        return 0;
-    while (i)
+    ret = s1;
+    while (*s1)
+        s1++;
+    while (*s2)
     {
-        if (s[i] == c)
-            return (char *)(s + i);
-        i--;
+      *s1++ = *s2++;
     }
-    return 0;
+    *s1 ='\0';
+    return (ret);
 }

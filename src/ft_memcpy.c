@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabrielrapaport <gabrielrapaport@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/05 21:54:11 by gabrielrapa       #+#    #+#             */
-/*   Updated: 2020/03/06 09:59:39 by gabrielrapa      ###   ########.fr       */
+/*   Created: 2020/03/05 21:18:13 by gabrielrapa       #+#    #+#             */
+/*   Updated: 2020/03/06 09:59:38 by gabrielrapa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// copy until a delimiter is found then return a pointer to the next element after delimiter
-void *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)
+#include "libft.h"
+
+void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-    while (n--)
-    {  
-        *(unsigned char *)dst++ = *(unsigned char *)src++;
-        if ((unsigned char)c == *(unsigned char*)src)
-            return (unsigned char *)dst++;
+    void *ret;
+
+    ret = dst;
+
+    while(n--)
+    {
+        *(unsigned char*)dst++ = *(unsigned char*)src++;
     }
-    return (0);
+
+    return (ret);
 }

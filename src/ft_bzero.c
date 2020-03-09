@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabrielrapaport <gabrielrapaport@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/07 11:51:00 by gabrielrapa       #+#    #+#             */
-/*   Updated: 2020/03/07 12:04:26 by gabrielrapa      ###   ########.fr       */
+/*   Created: 2020/03/05 21:03:55 by gabrielrapa       #+#    #+#             */
+/*   Updated: 2020/03/06 16:13:02 by gabrielrapa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+void ft_bzero(void *s, size_t n)
 {
-    while (1)
-    {
-        if (*s == c)
-            return ((char *)s);
-        if (*s++ == '\0')
-            return 0;
-    }
+    // need to figure out how to check if s is big enough to handle n elements
+    ft_memset(s, 0, n);
 }

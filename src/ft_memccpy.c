@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabrielrapaport <gabrielrapaport@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/06 21:47:33 by gabrielrapa       #+#    #+#             */
-/*   Updated: 2020/03/06 21:53:12 by gabrielrapa      ###   ########.fr       */
+/*   Created: 2020/03/05 21:54:11 by gabrielrapa       #+#    #+#             */
+/*   Updated: 2020/03/06 09:59:39 by gabrielrapa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_strlen.c"
-
-char *ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
+// copy until a delimiter is found then return a pointer to the next element after delimiter
+void *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)
 {
-    int     len;
-    char    *ret;
-
-    len = ft_strlen(s2);
-    ret = s1;
-    while (*s1)
-        s1++;
-    while (*s2 && n--)
-        *s1++ = *s2++;
-    *s1 ='\0';
-    return (ret);
+    while (n--)
+    {  
+        *(unsigned char *)dst++ = *(unsigned char *)src++;
+        if ((unsigned char)c == *(unsigned char*)src)
+            return (unsigned char *)dst++;
+    }
+    return (0);
 }

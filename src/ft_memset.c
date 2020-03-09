@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabrielrapaport <gabrielrapaport@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/06 10:14:28 by gabrielrapa       #+#    #+#             */
-/*   Updated: 2020/03/06 10:19:59 by gabrielrapa      ###   ########.fr       */
+/*   Created: 2020/03/05 20:37:36 by gabrielrapa       #+#    #+#             */
+/*   Updated: 2020/03/06 09:59:37 by gabrielrapa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memchr(const void *s. int c, size_t n)
+void *ft_memset(void *b, int c, size_t len)
 {
-    while (n--)
-    {
-        if ((*(unsigned char *)s) == (unsigned char)c)
-            return ((void *)s);
+    unsigned char *tmp;
 
-        s++;
+    tmp = b;
+    while(len--)
+    {
+        *tmp++ = (unsigned char)c;
     }
-    return (0);
+    return (b);
 }

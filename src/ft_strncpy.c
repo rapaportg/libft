@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabrielrapaport <gabrielrapaport@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/06 18:55:38 by gabrielrapa       #+#    #+#             */
-/*   Updated: 2020/03/06 21:31:29 by gabrielrapa      ###   ########.fr       */
+/*   Created: 2020/03/06 15:48:30 by gabrielrapa       #+#    #+#             */
+/*   Updated: 2020/03/06 18:39:30 by gabrielrapa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include "ft_strlen.c"
 
-char *ft_strcat(char *restrict s1, const char *restrict s2)
+char *ft_strncpy(char *dst, const char *src, size_t len)
 {
     char    *ret;
+    size_t  start;
 
-    ret = s1;
-    while (*s1)
-        s1++;
-    while (*s2)
-        *s1++ = *s2++;
-    *s1 ='\0';
+    ret = dst;
+    start = len;
+    if (!len)
+        return (ret);
+    while (*src && len--)
+        *dst++ = *src++;
+    if (len <= start)
+        ft_bzero(dst, len);
+    
     return (ret);
 }

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "../ft_strstr.c"
+#include "libft.h"
 
 int main ()
 {
@@ -11,7 +11,7 @@ int main ()
   {
     printf("string found\n" );
     printf ("First occurrence of string \"test\" in \"%s\" is"\
-           " \"%s\"",string, p);
+           " \"%s\"\n",string, p);
   }
   else printf("string not found\n" );
    return 0;

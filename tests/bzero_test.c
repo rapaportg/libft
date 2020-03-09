@@ -1,4 +1,4 @@
-#include "../ft_bzero.c"
+#include "libft.h"
 #include "stdio.h"
 #include "stdlib.h"
 
@@ -13,5 +13,10 @@ void bzero_test(char *tmp)
 int main()
 {
     char *test = malloc(256);
+    char *ptr = test;
+
+    printf("\n\n%ld\n\n", );
+    printf("\nsize of test: %d\n", (int)sizeof(test));
+
     bzero_test(test);
 }

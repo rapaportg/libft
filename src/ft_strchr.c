@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabrielrapaport <gabrielrapaport@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/05 21:03:55 by gabrielrapa       #+#    #+#             */
-/*   Updated: 2020/03/06 16:13:02 by gabrielrapa      ###   ########.fr       */
+/*   Created: 2020/03/07 11:51:00 by gabrielrapa       #+#    #+#             */
+/*   Updated: 2020/03/07 12:04:26 by gabrielrapa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_memset.c"
 
-void ft_bzero(void *s, size_t n)
+char *ft_strchr(const char *s, int c)
 {
-    ft_memset(s, 0, n);
+  if (!s)
+    return 0;
+  while (1)
+  {
+    if (*s == c)
+        return ((char *)s);
+    if (*s++ == '\0')
+        return 0;
+  }
 }
