@@ -15,8 +15,11 @@
 
 char *ft_strcpy(char *dst, const char *src)
 {
-    char *ret = dst;
-
+    char *ret;
+    
+    ret = dst;
+    if ((sizeof(dst) * ft_strlen(dst))  < (sizeof(src) * ft_strlen(src)))
+      return '\0';
     while (*src != '\0')
     {
         *dst++ = *src++;
