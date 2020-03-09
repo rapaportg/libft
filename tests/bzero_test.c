@@ -2,8 +2,16 @@
 #include "stdio.h"
 #include "stdlib.h"
 
+
+void bzero_test(char *tmp)
+{
+  ft_bzero(tmp, 256);
+  printf("Test of bzero\n%s", tmp);
+
+}
+
 int main()
 {
     char *test = malloc(256);
-    printf("%s", test);
+    bzero_test(test);
 }

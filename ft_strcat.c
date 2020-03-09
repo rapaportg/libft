@@ -16,10 +16,8 @@
 
 char *ft_strcat(char *restrict s1, const char *restrict s2)
 {
-    int     len;
     char    *ret;
 
-    len = ft_strlen(s2);
     ret = s1;
     while (*s1)
         s1++;
